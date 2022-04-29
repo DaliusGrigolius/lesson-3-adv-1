@@ -6,22 +6,21 @@ namespace lesson_3_adv_1
     {
         static void Main(string[] args)
         {
-            SomeClass<SomeIntClass> someClass = new SomeClass<SomeIntClass>();
-            SomeIntClass someIntClass = new SomeIntClass(1);
-            someClass.AddSomething(someIntClass);
-            someClass.AddSomething(someIntClass);
-            someClass.AddSomething(someIntClass);
+            SomeClass<int> someClass = new SomeClass<int>();
+            someClass.AddSomething(1);
+            someClass.AddSomething(2);
+            someClass.AddSomething(3);
 
             Console.WriteLine("------------------------------------");
             someClass.PrintAllSomethings();
             Console.WriteLine("------------------------------------");
             Console.WriteLine(someClass.RetrieveConvertedListToArray());
             Console.WriteLine("------------------------------------");
-            Console.WriteLine(someClass.RetrieveItem(someIntClass));
+            Console.WriteLine(someClass.RetrieveItem(1));
             Console.WriteLine("------------------------------------");
-            Console.WriteLine(someClass.RetrieveItemOrDefaultType(someIntClass));
+            Console.WriteLine(someClass.RetrieveItemOrDefaultType(2));
             Console.WriteLine("------------------------------------");
-            Console.WriteLine(someClass.IsItemExists(someIntClass));
+            Console.WriteLine(someClass.IsItemExists(3));
             Console.WriteLine("------------------------------------");
 
             Console.ReadKey();
